@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-pedia - C言語チートシート</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>C-pedia</h1>
+        <p>C言語チートシートサイト</p>
+    </header>
+
+    <main>
+        <aside id="sidebar">
+            <div id="search-container">
+                <input type="text" id="search-box" placeholder="キーワード検索...">
+            </div>
+            <nav id="category-nav">
+                <h2>カテゴリ</h2>
+                <ul id="category-list">
+                    <!-- Categories will be populated by JS -->
+                </ul>
+            </nav>
+        </aside>
+        <section id="content-area">
+            <div id="item-list-container">
+                <h2>項目一覧</h2>
+                <div id="item-list">
+                    <!-- Items will be populated by JS -->
+                </div>
+            </div>
+            <div id="item-detail-container" class="hidden">
+                <!-- Detail view will be populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C-pedia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
