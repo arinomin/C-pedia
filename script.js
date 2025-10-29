@@ -499,9 +499,17 @@ int main() {
         itemListEl.innerHTML = '';
         items.forEach(item => {
             const itemDiv = document.createElement('div');
-            itemDiv.textContent = item.name;
-            itemDiv.classList.add('item-list-entry'); // Add a class for styling
+            itemDiv.classList.add('item'); // new CSS class
             itemDiv.dataset.id = item.id;
+
+            const title = document.createElement('h3');
+            title.textContent = item.name;
+
+            const description = document.createElement('p');
+            description.textContent = item.description;
+
+            itemDiv.appendChild(title);
+            itemDiv.appendChild(description);
             itemListEl.appendChild(itemDiv);
         });
     }
@@ -580,8 +588,9 @@ int main() {
     }
 
     function handleItemClick(e) {
-        if (e.target.classList.contains('item-list-entry')) {
-            const itemId = e.target.dataset.id;
+        const clickedItem = e.target.closest('.item');
+        if (clickedItem) {
+            const itemId = clickedItem.dataset.id;
             const item = cheatSheetData.find(i => i.id === itemId);
             if (item) {
                 showDetailView(item);

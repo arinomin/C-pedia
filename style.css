@@ -92,6 +92,37 @@ main {
     padding-left: 2rem;
 }
 
+#item-list .item {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+#item-list .item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    background-color: #f0f8ff;
+    border-left: 5px solid var(--link-color);
+    padding-left: calc(1.5rem - 4px); /* 罫線の太さ分内側にずらす */
+}
+
+#item-list .item h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--link-color);
+}
+
+#item-list .item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+
 #item-list-container, #item-detail-container {
     background-color: var(--card-bg);
     padding: 2rem;
